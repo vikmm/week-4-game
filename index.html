@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+       <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+    <script src="./assets/javascript/game.js"></script>
+
+
+
+  </head>
+  <body>
+    
+    <div class="header">
+      <h1>Crystals Collector!<h1>
+      
+    </div>
+        
+        <div class="body">
+          <p>You will be given a random number at the start of the game. </p>
+            <br>
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </p>
+          <br>
+           <p>You will win the game by matching your total score to random number, you lose the gmae if your total score goes above the random number.</p>
+          <br>
+           <p>The value of each crystal is hidden from you until you click on it.</p>
+          <br>
+           <p>Each time when the game starts, the game will change the value of each crystal.</p>
+         </div>
+        
+       
+        <div class="random-score">
+          <span id = "random">
+          </span>
+        </div>
+            
+          <div class="wl-container">
+            <div class="wins">
+           <p id = "winning">Wins:</p>
+         </div>
+         <div class="losses">
+           <p id = "lose">Losses:</p>
+         </div>
+            </div>
+          
+          <div class="crystals-container">
+
+            <div id = "red">
+              <div class = "crystal">
+            <img src="assets/images/red.png" alt="redcrystal" style="width:75px;height:75px;">
+            </div>
+            </div>
+
+            <div id = "blue">
+              <div class = "crystal">
+            <img src="assets/images/blue.png" alt="bluecrystal" style="width:75px;height:75px;">
+            </div>
+            </div>
+            
+
+            <div id = "yellow">
+              <div class = "crystal">
+            <img src="assets/images/yellow.png" alt="yellowcrystal" style="width:75px;height:75px;">
+            </div>
+            </div>
+
+            <div id = "green">
+              <div class = "crystal">
+            <img src="assets/images/green.png" alt="greencrystal" style="width:75px;height:75px;">
+            </div>
+            </div>
+            
+          </div>
+
+          <div class="total-score">
+            <p>Your total score is:</p>
+          </div>
+
+          <div class = "score">
+            <span id = "scoreBoard">
+            </span>
+          </div>
+            
+            
+  
+  </body>
+</html>
