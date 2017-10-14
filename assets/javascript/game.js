@@ -19,8 +19,18 @@ console.log("blue crystal " +blue);
 console.log("yellow crystal " +yellow);
 console.log("green crystal " +green);
 
-
+var getRandom = function(){
+	randomScore = Math.floor((Math.random() * 101) + 19);
+	red = Math.floor((Math.random() * 12) + 1);
+	blue = Math.floor((Math.random() * 12) + 1);
+	yellow = Math.floor((Math.random() * 12) + 1);
+	green = Math.floor((Math.random() * 12) + 1);
+}
       
+
+var reset = function(){
+	totalScore = 0;
+}
 
 // RED CRYSTAL //
 $("#red").on("click", function() {
@@ -35,17 +45,16 @@ console.log("crystalclicked");
 
 if (totalScore == randomScore){
 	wins = wins + 1;
-	randomScore = Math.floor((Math.random() * 101) + 19);
-	red = Math.floor((Math.random() * 12) + 1);
-	blue = Math.floor((Math.random() * 12) + 1);
-	yellow = Math.floor((Math.random() * 12) + 1);
-	green = Math.floor((Math.random() * 12) + 1);
-	totalScore = 0;
+	reset();
+	getRandom();
 	$("#winning").html("Wins: "+ wins);
 
 } else if (totalScore > randomScore) {
     losses ++;
+    reset();
+	getRandom();
     $("#lose").html("Losses: "+ losses);
+    $("#random").html(randomScore);
     
 
 }});
